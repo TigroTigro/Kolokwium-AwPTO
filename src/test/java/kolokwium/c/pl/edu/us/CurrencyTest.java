@@ -10,14 +10,13 @@ public class CurrencyTest
 	public void convertFromPlnTest() {
 		Currency testingCurrency = new Currency("fakeWaluta", 5);
 		
-		//assertEquals(2.0, testingCurrency.convertFromPLN(10));
-		assertTrue(testingCurrency.convertFromPLN(10) == 2.0);
+		assertEquals(2.0, testingCurrency.convertFromPLN(10), Double.MIN_VALUE);
 	}
 	
 	@Test
 	public void convertToPlnTest() {
 		Currency testingCurrency = new Currency("fakeWaluta", 5);
 		
-		assertTrue(testingCurrency.convertToPLN(10) == 50.0);
+		assertEquals(50.0, testingCurrency.convertToPLN(10), Double.MIN_VALUE);
 	}
 }
